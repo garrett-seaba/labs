@@ -38,3 +38,28 @@ show ip route isis
 ```
 
 ---
+
+## IP Addressing
+
+### Allocation
+| Purpose | Subnet |
+| :--- | :--- |
+| Leaf Loopbacks | 10.100.0.0/24 |
+| Spine Loopbacks | 10.100.1.0/24 |
+| Leaf/Spine Connections | 10.100.2.0/23 |
+
+### Interface IP Addresses
+| Device | Interface | IP Address |
+| :--- | :--- | :--- |
+| spine1 | Eth1 | 10.100.2.0/31 |
+| spine1 | Eth2 | 10.100.2.2/31 |
+| spine1 | Lo0 | 10.100.1.1/32 |
+| spine2 | Eth1 | 10.100.2.4/31 |
+| spine2 | Eth2 | 10.100.2.6/31 |
+| spine2 | Lo0 | 10.100.1.2/32 |
+| leaf1 | Eth1 | 10.100.2.1/31 |
+| leaf1 | Eth2 | 10.100.2.5/31 |
+| leaf1 | Lo0 | 10.100.0.1/32 |
+| leaf2 | Eth1 | 10.100.2.3/31 |
+| leaf2 | Eth2 | 10.100.2.7/31 |
+| leaf2 | Lo0 | 10.100.0.2/32 |
