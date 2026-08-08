@@ -6,7 +6,7 @@ A basic two-spine, two-leaf IP fabric using IS-IS as the link-state IGP underlay
 
 ## Topology
 
-* **Nodes:** 2 Spines, 2 Leaves
+* **Nodes:** 2 Provider, 2 Provider Edge
 * **Network Type:** Point-to-Point interfaces
 * **Addressing:** Unnumbered IP / '/31' point-topoints, '/32' Loopbacks (System IDs derived from Loopbacks)
 * **ISIS Area**: '49.0001' (Single-Area, Level-2 only)
@@ -36,7 +36,7 @@ show isis database
 ```
 
 ### 3. Route Table
-Verify Loopback0 reachability across all spine and leaf switches:
+Verify Loopback0 reachability across all Provider and Provider Edge routers:
 ```
 show ip route isis
 ```
@@ -48,22 +48,22 @@ show ip route isis
 ### Allocation
 | Purpose | Subnet |
 | :--- | :--- |
-| Leaf Loopbacks | 10.100.0.0/24 |
-| Spine Loopbacks | 10.100.1.0/24 |
-| Leaf/Spine Connections | 10.100.2.0/23 |
+| Provider Edge Loopbacks | 10.100.0.0/24 |
+| Provider Loopbacks | 10.100.1.0/24 |
+| P/PE Connections | 10.100.2.0/23 |
 
 ### Interface IP Addresses
 | Device | Interface | IP Address |
 | :--- | :--- | :--- |
-| spine1 | Eth1 | 10.100.2.0/31 |
-| spine1 | Eth2 | 10.100.2.2/31 |
-| spine1 | Lo0 | 10.100.1.1/32 |
-| spine2 | Eth1 | 10.100.2.4/31 |
-| spine2 | Eth2 | 10.100.2.6/31 |
-| spine2 | Lo0 | 10.100.1.2/32 |
-| leaf1 | Eth1 | 10.100.2.1/31 |
-| leaf1 | Eth2 | 10.100.2.5/31 |
-| leaf1 | Lo0 | 10.100.0.1/32 |
-| leaf2 | Eth1 | 10.100.2.3/31 |
-| leaf2 | Eth2 | 10.100.2.7/31 |
-| leaf2 | Lo0 | 10.100.0.2/32 |
+| P-01 | Eth1 | 10.100.2.0/31 |
+| P-01 | Eth2 | 10.100.2.2/31 |
+| P-01 | Lo0 | 10.100.1.1/32 |
+| P-02 | Eth1 | 10.100.2.4/31 |
+| P-02 | Eth2 | 10.100.2.6/31 |
+| P-02 | Lo0 | 10.100.1.2/32 |
+| PE-01 | Eth1 | 10.100.2.1/31 |
+| PE-01 | Eth2 | 10.100.2.5/31 |
+| PE-01 | Lo0 | 10.100.0.1/32 |
+| PE-02 | Eth1 | 10.100.2.3/31 |
+| PE-02 | Eth2 | 10.100.2.7/31 |
+| PE-02 | Lo0 | 10.100.0.2/32 |
