@@ -12,6 +12,8 @@ A basic two-spine, two-leaf IP fabric using IS-IS as the link-state IGP underlay
 * **ISIS Area**: '49.0001' (Single-Area, Level-2 only)
 * **Vendor-OS:** Arista-EOS
 
+![IS-IS Underlay Topology](./Underlay-Diagram.drawio.svg)
+
 ## Objective
 Establish L2-free, deterministic IP reachability between all node Loopback0 addresses using IS-IS over Point-to-Point links.
 
