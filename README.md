@@ -1,6 +1,6 @@
 # Network Engineering Labs
 
-A collection of hands-on, reproducible network topoligies.
+A collection of hands-on, reproducible network topologies.
 
 Every lab is built and tested within GNS3
 
@@ -10,7 +10,7 @@ Every lab is built and tested within GNS3
 
 | ID | Title | Key Protocols | Topology |
 | :--- | :--- | :--- | :--- |
-| **01** | [ISIS-Underlay](./01-isis-underlay) |  IS-IS (Single-Area L2) | 2 Spines, 2 Leaves |
+| **01** | [ISIS-Underlay](./01-isis-underlay) |  IS-IS (Single-Area L2) | 2 Provider, 2 Provider Edge |
 | **02** | *Upcoming* | | |
 
 ## Repository Structure
